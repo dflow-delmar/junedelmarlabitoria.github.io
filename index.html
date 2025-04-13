@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Files</title>
+</head>
+<body>
+  <h1>Available PDFs</h1>
+  <ul id="pdf-list"></ul>
+
+  <script>
+    const files = ['Test_BC.pdf', 'file2.pdf']; // Add more filenames here
+
+    const list = document.getElementById('pdf-list');
+    files.forEach(file => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${file}" target="_blank">${file}</a>`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
