@@ -9,12 +9,22 @@
   <ul id="pdf-list"></ul>
 
   <script>
-    const files = ['Test_BC.pdf', 'file2.pdf']; // Add more filenames here
+    const files = [
+      '1273495 Fails to flatten.pdf',
+      '75948_MP_BHBooklet_A5_QTY_10000.pdf',
+      'BC Spot Colours present.pdf',
+      'Business Card on A4.pdf',
+      'DG03666_TextPB 1 Low Res Images.pdf',
+      'New Town Toyota - BC Good File.pdf',
+      'Preflight BC 4 Kinds.pdf',
+      'Test_BC.pdf'
+    ];
 
     const list = document.getElementById('pdf-list');
     files.forEach(file => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="${file}" target="_blank">${file}</a>`;
+      const encodedFile = encodeURIComponent(file);
+      li.innerHTML = `<a href="${encodedFile}" target="_blank">${file}</a>`;
       list.appendChild(li);
     });
   </script>
